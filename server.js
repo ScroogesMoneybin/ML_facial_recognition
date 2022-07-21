@@ -11,10 +11,8 @@ const image=require("./controllers/image.js");
 const pg_db=knex({
     client: 'pg',
     connection: {
-      host : 'postgresql-encircled-33154',
-      user : 'postgres',
-      password : 'Test123',
-      database : 'ml_face_db'
+      connectionString : process.env.DATABASE_URL,
+      ssl:true
     }
 });
 
