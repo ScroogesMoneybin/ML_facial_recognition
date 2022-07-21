@@ -36,6 +36,6 @@ app.put("/image",(request,response)=>{image.submitImage(request,response,pg_db)}
 
 app.post("/imageurl",(request,response)=>{image.ClarifaiCall(request,response)});
 
-app.listen(8080, ()=>{
-	console.log('app is running');
+app.listen(process.env.PORT || 8080, ()=>{
+	console.log(`app is running on ${process.env.PORT}`);
 })
