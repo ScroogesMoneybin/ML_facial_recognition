@@ -11,7 +11,7 @@ const image=require("./controllers/image.js");
 const pg_db=knex({
     client: 'pg',
     connection: {
-      host : '127.0.0.1',
+      host : 'postgresql-encircled-33154',
       user : 'postgres',
       password : 'Test123',
       database : 'ml_face_db'
@@ -36,6 +36,6 @@ app.put("/image",(request,response)=>{image.submitImage(request,response,pg_db)}
 
 app.post("/imageurl",(request,response)=>{image.ClarifaiCall(request,response)});
 
-app.listen(process.env.PORT || 8080, ()=>{
-	console.log(`app is running on ${process.env.PORT}`);
+ app.listen(process.env.PORT || 8080, ()=>{
+  console.log(`app is running on ${process.env.PORT}`);
 })
