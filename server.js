@@ -12,8 +12,10 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 const pg_db=knex({
     client: 'pg',
     connection: {
-      connectionString : process.env.DATABASE_URL,
-      ssl:true
+      host: 'dpg-cds56o02i3mrfomg1650-a',
+      user : 'ml_face_postgress_user',
+      password : 'Q1PGkABHZuYRIsgvBLuv1daKr4azns0p',
+      database : 'ml_face_postgress'
     }
 });
 
