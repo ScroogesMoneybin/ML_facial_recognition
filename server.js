@@ -12,10 +12,9 @@ const image=require("./controllers/image.js");
 const pg_db=knex({
     client: 'pg',
     connection: {
-      host : 'db.liifscviwadshsiqtqse.supabase.co',
-      user : 'postgres',
-      password : 'vM2YpVrcxvFTziz9',
-      database : 'postgres'
+      connectionString : 'postgresql://postgres:[vM2YpVrcxvFTziz9]@db.liifscviwadshsiqtqse.supabase.co:5432/postgres',
+      ssl: true
+      
     }
 });
 
