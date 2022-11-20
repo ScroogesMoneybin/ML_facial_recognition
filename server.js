@@ -8,12 +8,14 @@ const signin=require("./controllers/signin.js");
 const getprofile=require("./controllers/getprofile.js");
 const image=require("./controllers/image.js");
 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0; 
+
 const pg_db=knex({
     client: 'pg',
     connection: {
-      connectionString : process.env.DATABASE_URL,
-      ssl:true
+      host : 'db.liifscviwadshsiqtqse.supabase.co',
+      user : 'postgres',
+      password : 'vM2YpVrcxvFTziz9',
+      database : 'postgres'
     }
 });
 
