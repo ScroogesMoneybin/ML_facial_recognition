@@ -12,7 +12,7 @@ const image=require("./controllers/image.js");
 const pg_db=knex({
     client: 'pg',
     connection: {
-      connectionString : 'postgresql://postgres:[vM2YpVrcxvFTziz9]@db.liifscviwadshsiqtqse.supabase.co:5432/postgres',
+      connectionString : 'postgresql://postgres:vM2YpVrcxvFTziz9@db.liifscviwadshsiqtqse.supabase.co:5432/postgres',
       ssl: true
       
     }
