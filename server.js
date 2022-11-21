@@ -12,7 +12,7 @@ const image=require("./controllers/image.js");
 const pg_db=knex({
     client: 'pg',
     connection: {
-      connectionString : 'postgres://ml_face_postgress_user:Q1PGkABHZuYRIsgvBLuv1daKr4azns0p@dpg-cds56o02i3mrfomg1650-a/ml_face_postgress',
+      connectionString : 'postgres://ml_face_postgress_user:Q1PGkABHZuYRIsgvBLuv1daKr4azns0p@dpg-cds56o02i3mrfomg1650-a.oregon-postgres.render.com/ml_face_postgress',
       ssl: true
       
     }
