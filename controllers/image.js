@@ -3,7 +3,7 @@ const app = new Clarifai.App({
  apiKey: `${process.env.CLAR_API_KEY}`,
 });
 
-const ClarifaiCall=(request,response)=>{app.models.predict('ocr-scene-chinese-english-paddleocr', request.body.input)
+const ClarifaiCall=(request,response)=>{app.models.predict('language-aware-multilingual-ocr-multiplex', request.body.input)
 	.then(info=>{
 		response.json(info)
 	})
