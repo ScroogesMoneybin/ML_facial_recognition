@@ -1,6 +1,6 @@
 const Clarifai = require('clarifai');
 const app = new Clarifai.App({
- apiKey: 'e8a6d18824094b6394fb76dd377a3275',
+ apiKey: process.env.CLAR_API_KEY,
 });
 
 const ClarifaiCall=(request,response)=>{app.models.predict('ocr-document', request.body.input)
