@@ -12,6 +12,7 @@ const ClarifaiCall=(request,response)=>{app.models.predict('language-aware-multi
 
 
 const submitImage=(request,response,pg_db)=>{
+	console.log("Clarifaicall", response);
 	const {id}=request.body;
 	pg_db("users").where("id","=",id).increment("entries",1).returning("entries")
 	.then(entries=>{
