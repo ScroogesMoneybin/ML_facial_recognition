@@ -12,7 +12,7 @@ const image=require("./controllers/image.js");
 const pg_db=knex({
     client: 'pg',
     connection: {
-      connectionString : process.env.POSTGRES_URL,
+      connectionString : `${process.env.POSTGRES_URL}`,
       ssl: true
       
     }
